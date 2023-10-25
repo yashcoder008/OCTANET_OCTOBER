@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #210440;
+    padding: 10px;
+}
+
+.to_do_container
+{
+    width: 100%;
+    max-width:540px;
+    background-color: aliceblue;
+    margin: 100px auto 20px;
+    padding: 35px 30px 70px;
+    border-radius: 10px;
+}
+.to_do_container h2{
+    color: #210440;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.to_do_container h2 img{
+    width: 28px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.content
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c6d2e97d;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+#inputText
+{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+#button
+{
+    border: none;
+    outline: none;
+    padding: 15px 30px;
+    background-color: #FF4343;
+    color: antiquewhite;
+    font-size: 16px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 19px;
+    padding: 10px 8px 10px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before
+{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(/img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left: 8px;
+
+}
+
+ul li.checked
+{
+    color: #55555596;
+    text-decoration: line-through;
+}
+
+ul li.checked::before
+{
+    background-image: url(/img/yes.png);
+}
+
+ul li.checked::after
+{
+    content: '';
+    position: absolute;
+    width: 78px;
+    height: 15px;
+    background-image: url(/img/complet.png);
+    background-size:cover;
+    background-position: center;
+    right: 50%;
+    top: 15px;
+    transform: rotate(1.5deg);
+
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color: #55555596;
+    font-size: 24px ;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover
+{
+    background-color: #c6d2e97d;
+}
